@@ -17,9 +17,9 @@ class FontGenerator:
         cfg = Config('model/mxfont/cfgs/defaults.yaml')
         g_kwargs = cfg.get('g_args', {})
 
-        self.gen = Generator(1, cfg.C, 1, **g_kwargs)
+        self.gen = Generator(1, cfg.C, 1, **g_kwargs).cuda()
 
-        weight = torch.load('model/mxfont/fontgen.pth', map_location='cpu')
+        weight = torch.load('model/mxfont/fontgen.pth')
 
         if "generator_ema" in weight:
             weight = weight["generator_ema"]
