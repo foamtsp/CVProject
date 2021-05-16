@@ -1,0 +1,21 @@
+name: cvprojectserver
+channels:
+- conda-forge
+- defaults
+dependencies:
+- jupyterlab
+- ipywidgets
+- tqdm
+- numpy
+- matplotlib
+- scikit-learn
+- nodejs
+- pip
+- opencv
+- pytorch
+- torchvision
+- Pillow
+- fastapi
+- uvicorn
+- google-cloud-pubsub
+- python-multipart
